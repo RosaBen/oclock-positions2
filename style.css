@@ -25,6 +25,10 @@ body {
   margin: 0 auto;
 }
 
+header {
+  margin: 2rem;
+}
+
 /* Footer */
 
 footer {
@@ -48,11 +52,6 @@ footer a {
   text-decoration: none;
 }
 
-/* header */
-
-header {
-  margin: 2rem;
-}
 /* typos */
 h1:before {
   content: "xxxxxxxxxxxxxxxxxxxxxxxxxx";
@@ -76,3 +75,20 @@ h1 strong {
   letter-spacing: 3px;
   font-size: 1.2rem;
 }
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.products > h2 {
+  display: inline-block;
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Main */

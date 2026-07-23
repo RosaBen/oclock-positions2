@@ -41,3 +41,9 @@ const data = [{
 },
 
 ];
+
+const mainMobile = document.querySelector(".products");
+
+const h2Soldes = document.createElement("h2");
+h2Soldes.textContent = "Soldes";
+mainMobile.appendChild(h2Soldes);
