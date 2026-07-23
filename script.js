@@ -89,7 +89,7 @@ data.map((item, index) => {
   const divElement = document.createElement("div");
 
   const pElement = document.createElement("p");
-  pElement.textContent = `${item.price} €`;
+  pElement.textContent = `${item.price.toFixed(2)} €`;
 
 
 
@@ -108,11 +108,19 @@ data.map((item, index) => {
 
   if (item.newPrice !== null || item.discount !== "") {
     const delElement = document.createElement("del");
-    delElement.textContent = `${item.price} €`;
+    delElement.textContent = `${item.price.toFixed(2)} €`;
+
+    pElement.style.display = "none";
+
+    const newPElement = document.createElement("p");
+    newPElement.textContent = `${item.newPrice.toFixed(2)} €`;
 
     const pDiscountElement = document.createElement("p");
     pDiscountElement.textContent = item.discount;
+
     divElement.appendChild(delElement);
+    divElement.appendChild(newPElement);
+
     aBottomElement.appendChild(pDiscountElement);
   }
 });
