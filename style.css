@@ -164,6 +164,19 @@ a {
     max-width: 768px;
   }
 
+  h1:before {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h1 strong {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
   .anchor {
     position: absolute;
     position-anchor: --sales;
@@ -184,15 +197,19 @@ a {
     align-items: center;
     anchor-name: --sales;
   }
-
-  /* position-anchor: --infobox;
-  margin: 0;
-  top: anchor(top);
-  left: calc(anchor(right) + 10px);
-  bottom: anchor(bottom);
-  background-color: olive;
-  border: 1px solid darkolivegreen; */
 }
 
 @media screen and (min-width: 1224px) {
+  #container {
+    max-width: 1224px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .anchor {
+    left: calc(anchor(left) - 163px);
+  }
 }
