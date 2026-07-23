@@ -117,6 +117,7 @@ data.map((item, index) => {
 
     const pDiscountElement = document.createElement("p");
     pDiscountElement.textContent = item.discount;
+    pDiscountElement.classList.add("discount");
 
     divElement.appendChild(delElement);
     divElement.appendChild(newPElement);

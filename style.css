@@ -59,6 +59,7 @@ footer a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .top-card,
@@ -68,10 +69,29 @@ footer a {
   align-items: center;
 }
 
+.bottom-card {
+  position: relative;
+}
+
 .bottom-card > div {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.discount {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid grey;
+  top: -230px;
+  left: 180px;
 }
 
 /* typos */
