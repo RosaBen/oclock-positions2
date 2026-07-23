@@ -62,6 +62,11 @@ footer a {
   margin-bottom: 1rem;
 }
 
+.cards article:nth-child(3) {
+  border: 2px solid #f4f0ec;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .top-card,
 .bottom-card {
   display: flex;
@@ -207,9 +212,10 @@ a {
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 
   .anchor {
-    left: calc(anchor(left) - 163px);
+    left: calc(anchor(left) - 140px);
   }
 }
