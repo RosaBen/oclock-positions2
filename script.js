@@ -2,41 +2,53 @@ const data = [{
   image: "./images/bottines-zip-cuir-taupe.jpg",
   title: "Bottines zip velours taupe",
   brand: "Kennel &amp; Schmenger",
-  price: 240
+  price: 240,
+  discount: "",
+  newPrice: null
 },
 {
   image: "./images/bottines-marcia-bleu.jpg",
   title: "Bottines Marcia bleu",
   brand: "Emma go",
-  price: 195
+  price: 195,
+  discount: "",
+  newPrice: null
 
 },
 {
   image: "./images/bottines-marron.jpg",
   title: "Bottines marron élastique multi",
   brand: "Anniel",
-  price: 195
+  price: 195,
+  discount: "",
+  newPrice: null
 
 },
 {
   image: "./images/bottines-cuir.jpg",
   title: "Bottines cuir paillettes",
   brand: "Rovial",
-  price: 195
+  price: 195,
+  discount: "-30%",
+  newPrice: 136.5
 
 },
 {
   image: "./images/bottines-franges.jpg",
   title: "Bottines franges et médailles",
   brand: "Minnetonka",
-  price: 195
+  price: 195,
+  discount: "",
+  newPrice: null
 
 },
 {
   image: "./images/bottines-anna-python.jpg",
   title: "Bottines Anna Python",
   brand: "Emma go",
-  price: 185
+  price: 185,
+  discount: "-20%",
+  newPrice: 148
 
 },
 
@@ -77,7 +89,7 @@ data.map((item, index) => {
   const divElement = document.createElement("div");
 
   const pElement = document.createElement("p");
-  pElement.textContent = item.price;
+  pElement.textContent = `${item.price} €`;
 
 
 
@@ -93,4 +105,14 @@ data.map((item, index) => {
   articleElement.appendChild(aBottomElement);
 
   mainMobile.appendChild(articleElement);
+
+  if (item.newPrice !== null || item.discount !== "") {
+    const delElement = document.createElement("del");
+    delElement.textContent = `${item.price} €`;
+
+    const pDiscountElement = document.createElement("p");
+    pDiscountElement.textContent = item.discount;
+    divElement.appendChild(delElement);
+    aBottomElement.appendChild(pDiscountElement);
+  }
 });

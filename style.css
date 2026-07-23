@@ -52,6 +52,15 @@ footer a {
   text-decoration: none;
 }
 
+/* Main */
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* typos */
 h1:before {
   content: "xxxxxxxxxxxxxxxxxxxxxxxxxx";
@@ -90,5 +99,3 @@ h1 strong {
   padding: 0.5rem;
   font-size: 0.8rem;
 }
-
-/* Main */
