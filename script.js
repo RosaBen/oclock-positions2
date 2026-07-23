@@ -55,12 +55,9 @@ const data = [{
 ];
 
 const mainMobile = document.querySelector(".products");
-
-// main title
-const h2Soldes = document.createElement("h2");
-h2Soldes.textContent = "Soldes";
-mainMobile.appendChild(h2Soldes);
-
+const mainDivElement = document.createElement("div");
+mainDivElement.classList.add("cards");
+mainMobile.appendChild(mainDivElement);
 
 // main article
 
@@ -104,7 +101,7 @@ data.map((item, index) => {
   articleElement.appendChild(aTopElement);
   articleElement.appendChild(aBottomElement);
 
-  mainMobile.appendChild(articleElement);
+  mainDivElement.appendChild(articleElement);
 
   if (item.newPrice !== null || item.discount !== "") {
     const delElement = document.createElement("del");

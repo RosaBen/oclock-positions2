@@ -122,6 +122,7 @@ h1 strong {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -131,6 +132,7 @@ h1 strong {
   background-color: red;
   padding: 0.5rem;
   font-size: 0.8rem;
+  text-transform: uppercase;
 }
 
 .products h3,
@@ -153,4 +155,44 @@ a {
 .bottom-card p,
 .bottom-card del {
   font-weight: bold;
+}
+
+/* responsives */
+
+@media screen and (min-width: 768px) {
+  #container {
+    max-width: 768px;
+  }
+
+  .anchor {
+    position: absolute;
+    position-anchor: --sales;
+    top: calc(anchor(top) + 20%);
+    left: calc(anchor(left));
+    bottom: anchor(bottom);
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    height: fit-content;
+    border-radius: 0 0.4rem 0.4rem 0;
+    padding: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    anchor-name: --sales;
+  }
+
+  /* position-anchor: --infobox;
+  margin: 0;
+  top: anchor(top);
+  left: calc(anchor(right) + 10px);
+  bottom: anchor(bottom);
+  background-color: olive;
+  border: 1px solid darkolivegreen; */
+}
+
+@media screen and (min-width: 1224px) {
 }
